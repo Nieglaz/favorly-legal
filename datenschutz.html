@@ -1,125 +1,307 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datenschutzerklärung – Favorly</title>
-  <style>
-    :root { color-scheme: light dark; }
-    * { box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6; margin: 0; padding: 0; color: #1c1c1e; background: #ffffff; }
-    @media (prefers-color-scheme: dark) {
-      body { color: #f2f2f7; background: #1c1c1e; } a { color: #6ea8fe; } .card { background: #2c2c2e; } }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
-    h1 { font-size: 1.7rem; margin: 0 0 4px; }
-    h2 { font-size: 1.2rem; margin: 32px 0 8px; }
-    .meta { color: #8e8e93; font-size: .9rem; margin-bottom: 24px; }
-    a { color: #0a67d3; }
-    .card { background: #f2f2f7; border-radius: 12px; padding: 12px 16px; margin: 16px 0; }
-    .todo { color: #b00020; font-weight: 600; }
-    footer { margin-top: 48px; font-size: .85rem; color: #8e8e93; }
-  </style>
-</head>
-<body>
-<div class="wrap">
-  <h1>Datenschutzerklärung</h1>
-  <p class="meta">App „Favorly" · Stand: <span class="todo">[DATUM EINTRAGEN]</span></p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datenschutzerklärung – Favorly</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        color: #1f2a44;
+        -webkit-text-size-adjust: 100%;
+        background:
+          radial-gradient(
+            1100px 700px at 12% -8%,
+            rgba(46, 115, 224, 0.16),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 640px at 110% 8%,
+            rgba(224, 166, 56, 0.12),
+            transparent 55%
+          ),
+          #e9efff;
+        background-attachment: fixed;
+      }
+      .wrap {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 40px 20px 72px;
+      }
+      .panel {
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid rgba(18, 62, 148, 0.14);
+        border-radius: 18px;
+        padding: 28px 26px 32px;
+        box-shadow: 0 18px 40px rgba(18, 62, 148, 0.1);
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 22px;
+      }
+      .brand .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 4px;
+        background: linear-gradient(135deg, #2e73e0, #123e94);
+      }
+      .brand .name {
+        font-weight: 700;
+        color: #123e94;
+        letter-spacing: 0.2px;
+      }
+      h1 {
+        font-size: 1.7rem;
+        margin: 0 0 4px;
+        color: #0b1b3a;
+        letter-spacing: -0.01em;
+      }
+      h2 {
+        font-size: 1.18rem;
+        margin: 30px 0 8px;
+        color: #123e94;
+      }
+      .meta {
+        color: #5b6b8c;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+      }
+      a {
+        color: #2e73e0;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(46, 115, 224, 0.35);
+      }
+      a:hover {
+        border-bottom-color: #2e73e0;
+      }
+      ul {
+        padding-left: 1.2em;
+      }
+      li {
+        margin: 4px 0;
+      }
+      .card {
+        background: rgba(224, 166, 56, 0.14);
+        border: 1px solid rgba(224, 166, 56, 0.35);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin: 18px 0;
+        color: #5b4308;
+      }
+      footer {
+        margin-top: 40px;
+        font-size: 0.85rem;
+        color: #5b6b8c;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          color: #dce6fa;
+          background:
+            radial-gradient(
+              1100px 700px at 12% -8%,
+              rgba(122, 173, 255, 0.14),
+              transparent 60%
+            ),
+            radial-gradient(
+              900px 640px at 110% 8%,
+              rgba(255, 204, 92, 0.08),
+              transparent 55%
+            ),
+            #070c1a;
+        }
+        .panel {
+          background: rgba(20, 32, 58, 0.55);
+          border-color: rgba(255, 255, 255, 0.12);
+          box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+        }
+        .brand .name {
+          color: #7aadff;
+        }
+        h1 {
+          color: #eaf1ff;
+        }
+        h2 {
+          color: #7aadff;
+        }
+        .meta,
+        footer {
+          color: #8fa0c4;
+        }
+        a {
+          color: #7aadff;
+          border-bottom-color: rgba(122, 173, 255, 0.4);
+        }
+        .card {
+          color: #ffd97a;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="panel">
+        <div class="brand">
+          <span class="dot"></span><span class="name">Favorly</span>
+        </div>
+        <h1>Datenschutzerklärung</h1>
+        <p class="meta">
+          App „Favorly" · Stand: <span>06.07.2026</span>
+        </p>
 
-  <div class="card">
-    <strong>Hinweis:</strong> Dies ist eine Vorlage und keine Rechtsberatung. Bitte vor
-    Veröffentlichung von einer Fachperson prüfen und alle <span class="todo">[PLATZHALTER]</span> ersetzen.
-  </div>
+        <h2>1. Verantwortlicher</h2>
+        <p>
+          Verantwortlich im Sinne der DSGVO:<br />
+          <span>nwmedia.</span><br />
+          <span>Dietesheimer Straße 24</span><br />
+          <span>63165 Mühlheim</span><br />
+          E-Mail: <span>info@niklaswiemer.de</span>
+        </p>
 
-  <h2>1. Verantwortlicher</h2>
-  <p>
-    Verantwortlich im Sinne der DSGVO:<br />
-    <span class="todo">[VORNAME NACHNAME]</span><br />
-    <span class="todo">[STRASSE HAUSNUMMER]</span><br />
-    <span class="todo">[PLZ ORT]</span><br />
-    E-Mail: <span class="todo">[KONTAKT-E-MAIL]</span>
-  </p>
+        <h2>2. Grundprinzip: Deine Daten bleiben in deiner iCloud</h2>
+        <p>
+          Favorly ist als <em>privacy-first</em>-App aufgebaut. Die von dir
+          eingegebenen Inhalte (Familien- und Haushaltsdaten, Anfragen, Termine,
+          Aufgaben, Kommentare, Profilangaben und ggf. Angaben zu betreuten
+          Personen wie Notizen oder Medikamente) werden in deiner persönlichen
+          <strong>iCloud über Apple CloudKit</strong> gespeichert. Der Anbieter
+          betreibt hierfür keinen eigenen Inhalts-Server und hat keinen Zugriff
+          auf diese Inhalte. Die Synchronisierung erfolgt zwischen deinen
+          Geräten sowie mit Personen, die du ausdrücklich in einen geteilten
+          Haushalt einlädst (Apple CloudKit Sharing).
+        </p>
 
-  <h2>2. Grundprinzip: Deine Daten bleiben in deiner iCloud</h2>
-  <p>
-    Favorly ist als <em>privacy-first</em>-App aufgebaut. Die von dir eingegebenen Inhalte
-    (Familien- und Haushaltsdaten, Anfragen, Termine, Aufgaben, Kommentare, Profilangaben und ggf.
-    Angaben zu betreuten Personen wie Notizen oder Medikamente) werden in deiner persönlichen
-    <strong>iCloud über Apple CloudKit</strong> gespeichert. Der Anbieter betreibt hierfür keinen
-    eigenen Inhalts-Server und hat keinen Zugriff auf diese Inhalte. Die Synchronisierung erfolgt
-    zwischen deinen Geräten sowie mit Personen, die du ausdrücklich in einen geteilten Haushalt
-    einlädst (Apple CloudKit Sharing).
-  </p>
+        <h2>3. Anmeldung („Sign in with Apple")</h2>
+        <p>
+          Die Anmeldung erfolgt über „Sign in with Apple". Dabei wird eine
+          anonymisierte Nutzerkennung verarbeitet; eine E-Mail-Adresse wird nur
+          verarbeitet, wenn du dies bei Apple erlaubst. Rechtsgrundlage: Art. 6
+          Abs. 1 lit. b DSGVO (Bereitstellung der App).
+        </p>
 
-  <h2>3. Anmeldung („Sign in with Apple")</h2>
-  <p>
-    Die Anmeldung erfolgt über „Sign in with Apple". Dabei wird eine anonymisierte Nutzerkennung
-    verarbeitet; eine E-Mail-Adresse wird nur verarbeitet, wenn du dies bei Apple erlaubst.
-    Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Bereitstellung der App).
-  </p>
+        <h2>4. Push-Benachrichtigungen</h2>
+        <p>
+          Wenn du Benachrichtigungen aktivierst, verarbeiten wir zur Zustellung
+          folgende Daten:
+        </p>
+        <ul>
+          <li>
+            ein Gerätetoken (von Apple bereitgestellt) und eine
+            Mitglieds-Kennung,
+          </li>
+          <li>
+            den Inhalt der jeweiligen Benachrichtigung (z. B. Titel einer
+            Anfrage, ein Kommentartext, der Vorname des auslösenden Mitglieds).
+          </li>
+        </ul>
+        <p>
+          Die Zustellung läuft über den Push-Dienst von Apple (Apple Push
+          Notification service, APNs) sowie über unseren Dienstleister
+          <strong>Supabase</strong> (Auftragsverarbeiter), der die
+          Benachrichtigung technisch entgegennimmt und an Apple weiterreicht.
+          Der Benachrichtigungsinhalt wird dabei zur Zustellung verarbeitet,
+          aber nicht dauerhaft protokolliert. Beim Push-Versand entstehen
+          Verbindungsdaten (z. B. IP-Adresse) beim Dienstleister.
+        </p>
+        <p>
+          Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung durch
+          Aktivieren der Benachrichtigungen). Du kannst Benachrichtigungen
+          jederzeit in der App oder in den iOS-Einstellungen deaktivieren.
+          Soweit Benachrichtigungen Gesundheitsdaten enthalten können (Art. 9
+          DSGVO), stützt sich die Verarbeitung zusätzlich auf deine
+          ausdrückliche Einwilligung (Art. 9 Abs. 2 lit. a DSGVO).
+        </p>
 
-  <h2>4. Push-Benachrichtigungen</h2>
-  <p>
-    Wenn du Benachrichtigungen aktivierst, verarbeiten wir zur Zustellung folgende Daten:
-  </p>
-  <ul>
-    <li>ein Gerätetoken (von Apple bereitgestellt) und eine Mitglieds-Kennung,</li>
-    <li>den Inhalt der jeweiligen Benachrichtigung (z. B. Titel einer Anfrage, ein Kommentartext,
-      der Vorname des auslösenden Mitglieds).</li>
-  </ul>
-  <p>
-    Die Zustellung läuft über den Push-Dienst von Apple (Apple Push Notification service, APNs) sowie
-    über unseren Dienstleister <strong>Supabase</strong> (Auftragsverarbeiter), der die
-    Benachrichtigung technisch entgegennimmt und an Apple weiterreicht. Der Benachrichtigungsinhalt
-    wird dabei zur Zustellung verarbeitet, aber nicht dauerhaft protokolliert. Beim Push-Versand
-    entstehen Verbindungsdaten (z. B. IP-Adresse) beim Dienstleister.
-  </p>
-  <p>
-    Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung durch Aktivieren der Benachrichtigungen).
-    Du kannst Benachrichtigungen jederzeit in der App oder in den iOS-Einstellungen deaktivieren.
-    Soweit Benachrichtigungen Gesundheitsdaten enthalten können (Art. 9 DSGVO), stützt sich die
-    Verarbeitung zusätzlich auf deine ausdrückliche Einwilligung (Art. 9 Abs. 2 lit. a DSGVO).
-  </p>
+        <h2>5. Kalender-Synchronisierung (optional)</h2>
+        <p>
+          Wenn du die Kalenderfunktion aktivierst, greift die App auf deinen
+          Gerätekalender zu, um Termine zu übernehmen oder einzutragen. Dieser
+          Zugriff bleibt lokal auf deinem Gerät. Rechtsgrundlage: Art. 6 Abs. 1
+          lit. a DSGVO.
+        </p>
 
-  <h2>5. Kalender-Synchronisierung (optional)</h2>
-  <p>
-    Wenn du die Kalenderfunktion aktivierst, greift die App auf deinen Gerätekalender zu, um Termine
-    zu übernehmen oder einzutragen. Dieser Zugriff bleibt lokal auf deinem Gerät. Rechtsgrundlage:
-    Art. 6 Abs. 1 lit. a DSGVO.
-  </p>
+        <h2>6. Nutzungsanalyse (TelemetryDeck)</h2>
+        <p>
+          Zur Verbesserung der App verwenden wir den datenschutzfreundlichen
+          Analyse-Dienst <strong>TelemetryDeck</strong> der TelemetryDeck GmbH,
+          Hamburg (Deutschland). Erfasst werden ausschließlich pseudonyme
+          Nutzungssignale wie aufgerufene Bildschirme, Verweildauer, App-Version
+          und grobe Geräte-/Systemangaben – <strong>kein Bezug zu deinen
+          Inhalten</strong> (keine Familien-, Gesundheits- oder Anfragedaten).
+        </p>
+        <p>
+          TelemetryDeck ist auf Datensparsamkeit ausgelegt: Es werden keine
+          Cookies gesetzt und keine dauerhaften Werbe-Kennungen verwendet. Ein
+          pro Installation gebildeter Bezeichner wird vor der Übertragung
+          einseitig verschlüsselt (Hash mit Zufallswert), sodass keine
+          Rückverfolgung zu deiner Person möglich ist. Die Verarbeitung erfolgt
+          auf Servern in der EU.
+        </p>
+        <p>
+          Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an
+          einer stabilen, bedarfsgerechten Weiterentwicklung der App). Du kannst
+          dieser Verarbeitung jederzeit mit Wirkung für die Zukunft
+          widersprechen (Kontakt siehe Ziffer 1). Mit TelemetryDeck besteht ein
+          Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO.
+        </p>
 
-  <h2>6. Nutzungsanalyse (falls aktiv)</h2>
-  <p>
-    <span class="todo">[Falls TelemetryDeck o. Ä. aktiv ist:]</span> Zur Verbesserung der App
-    verarbeiten wir pseudonyme Nutzungsstatistiken (z. B. aufgerufene Bildschirme, Verweildauer) ohne
-    Bezug zu deinen Inhalten. Es werden keine für dich persönlich identifizierenden Merkmale
-    dauerhaft gespeichert. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der
-    Produktverbesserung). Andernfalls diesen Abschnitt entfernen.
-  </p>
+        <h2>7. Empfänger / Auftragsverarbeiter</h2>
+        <ul>
+          <li>
+            Apple (iCloud/CloudKit, „Sign in with Apple", APNs) – Speicherung
+            und Zustellung.
+          </li>
+          <li>
+            Supabase (Push-Zustellung) – Auftragsverarbeiter gemäß Art. 28
+            DSGVO.
+          </li>
+          <li>
+            TelemetryDeck GmbH, Hamburg (pseudonyme Nutzungsanalyse) –
+            Auftragsverarbeiter gemäß Art. 28 DSGVO.
+          </li>
+        </ul>
 
-  <h2>7. Empfänger / Auftragsverarbeiter</h2>
-  <ul>
-    <li>Apple (iCloud/CloudKit, „Sign in with Apple", APNs) – Speicherung und Zustellung.</li>
-    <li>Supabase (Push-Zustellung) – Auftragsverarbeiter gemäß Art. 28 DSGVO.</li>
-    <li><span class="todo">[TelemetryDeck – nur falls aktiv]</span></li>
-  </ul>
+        <h2>8. Speicherdauer</h2>
+        <p>
+          Inhalte bleiben gespeichert, solange du sie in der App behältst; das
+          Löschen erfolgt durch dich (bzw. über iCloud). Gerätetokens werden
+          entfernt, wenn du Benachrichtigungen deaktivierst oder das Token
+          ungültig wird.
+        </p>
 
-  <h2>8. Speicherdauer</h2>
-  <p>
-    Inhalte bleiben gespeichert, solange du sie in der App behältst; das Löschen erfolgt durch dich
-    (bzw. über iCloud). Gerätetokens werden entfernt, wenn du Benachrichtigungen deaktivierst oder das
-    Token ungültig wird.
-  </p>
+        <h2>9. Deine Rechte</h2>
+        <p>
+          Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung,
+          Datenübertragbarkeit und Widerspruch sowie das Recht, eine erteilte
+          Einwilligung jederzeit mit Wirkung für die Zukunft zu widerrufen.
+          Zudem besteht ein Beschwerderecht bei einer
+          Datenschutz-Aufsichtsbehörde. Wende dich dazu an die oben genannte
+          Kontaktadresse.
+        </p>
 
-  <h2>9. Deine Rechte</h2>
-  <p>
-    Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und
-    Widerspruch sowie das Recht, eine erteilte Einwilligung jederzeit mit Wirkung für die Zukunft zu
-    widerrufen. Zudem besteht ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde. Wende dich
-    dazu an die oben genannte Kontaktadresse.
-  </p>
-
-  <footer>© <span class="todo">[JAHR]</span> <span class="todo">[VORNAME NACHNAME]</span> · Favorly</footer>
-</div>
-</body>
+        <footer>
+          © 2026 Niklas Wiemer · Favorly ·
+          <a href="impressum.html">Impressum</a> ·
+          <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>
